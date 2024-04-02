@@ -23,7 +23,7 @@ class MainPageWidget extends StatelessWidget {
                 fit: BoxFit.contain,
               )),
           SizedBox(height: screenHeight * 0.035),
-          if (index == 2)
+          if (index == 2 || index == 5 || index == 8) 
             Column(
               children: [
                 Text(
@@ -47,7 +47,7 @@ class MainPageWidget extends StatelessWidget {
                 ),
               ],
             ),
-          if (index != 2)
+          if (index != 2 && index != 5 && index != 8)
             Column(
               children: [
                 Text(
@@ -73,7 +73,7 @@ class MainPageWidget extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * .125,
           ),
-          if (index == 2)
+          if (index == 2 || index == 5 || index == 8)
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
