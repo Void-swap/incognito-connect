@@ -2,10 +2,12 @@
 
 # Incognito Connect
 
+## Access the web version of Incognito Connect [here](https://incognito-connent.web.app/) to chat anonymously from your browser.
+
 ## Description:
 Incognito Connect is a private messaging application designed to facilitate anonymous conversations between users.<br>
 It allows individuals to communicate with each other without revealing their identities, fostering open and honest dialogue in a secure environment.<br>
-Access the web version of Incognito Connect [here](https://incognito-connent.web.app/) to chat anonymously from your browser.
+
 ## Features:
 ### Anonymous Messaging: 
 Users can send and receive messages without disclosing their identities.
@@ -32,3 +34,5 @@ Contributions to Incognito Connect are welcome! If you encounter any bugs, have 
 
 - Special thanks to the developers of Flutter and Firebase for providing the tools and resources to build this application.
 - Inspired by the need for anonymous communication platforms in today's digital age.
+
+
