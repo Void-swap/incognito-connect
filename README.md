@@ -1,7 +1,8 @@
 # Incognito Connect
 
 ## Description:
-Incognito Connect is a private messaging application designed to facilitate anonymous conversations between users. It allows individuals to communicate with each other without revealing their identities, fostering open and honest dialogue in a secure environment.
+Incognito Connect is a private messaging application designed to facilitate anonymous conversations between users.<br>
+It allows individuals to communicate with each other without revealing their identities, fostering open and honest dialogue in a secure environment.
 
 ## Features:
 ### Anonymous Messaging: 
