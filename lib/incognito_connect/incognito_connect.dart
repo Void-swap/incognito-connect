@@ -81,7 +81,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
           },
         ),
       ),
-      body: Container(
+      body: ClipRRect(
         child: Stack(
           children: [
             Lottie.asset(
@@ -136,7 +136,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
                             ),
                           ),
                         ),
-
+        
                         // child: TextField(
                         //   controller: _msgController,
                         //   decoration: InputDecoration(hintText: 'Type here...'),

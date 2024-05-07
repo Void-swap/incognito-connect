@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoarding(),
+      home: Scaffold(
+        body: OnBoarding(),
+      ),
     );
   }
 }
