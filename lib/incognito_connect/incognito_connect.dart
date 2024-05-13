@@ -26,12 +26,29 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
   late TextEditingController _msgController;
   late StreamSubscription<QuerySnapshot> _subscription;
   List<MsgModel> listMsg = [];
+  final ScrollController _scrollController = ScrollController();
+  double _opacity = 1.0;
 
   @override
   void initState() {
     super.initState();
     _msgController = TextEditingController();
     _subscribeToChatMessages();
+
+    _scrollController.addListener(() {
+      if (_scrollController.position.atEdge) {
+        if (_scrollController.position.pixels == 0) {
+        } else {
+          setState(() {
+            _opacity = 0.0;
+          });
+        }
+      } else {
+        setState(() {
+          _opacity = 1.0;
+        });
+      }
+    });
   }
 
   @override
@@ -81,7 +98,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
           },
         ),
       ),
-      body: Container(
+      body: ClipRRect(
         child: Stack(
           children: [
             Lottie.asset(
@@ -100,6 +117,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
               children: [
                 Expanded(
                   child: ListView.builder(
+                    controller: _scrollController,
                     itemCount: listMsg.length,
                     itemBuilder: (context, index) {
                       final msg = listMsg[index];
@@ -126,12 +144,13 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
                           controller: _msgController,
                           decoration: InputDecoration(
                             hintText: "Type here...",
-                            hintStyle: TextStyle(color: Colors.black26),
+                            hintStyle: const TextStyle(color: Colors.black26),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black45),
+                              borderSide:
+                                  const BorderSide(color: Colors.black45),
                               borderRadius: BorderRadius.circular(15),
                             ),
                           ),
@@ -143,7 +162,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
                         // ),
                       ),
                       IconButton(
-                        icon: Icon(Icons.send),
+                        icon: const Icon(Icons.send),
                         onPressed: () {
                           final msg = _msgController.text.trim();
                           if (msg.isNotEmpty) {
@@ -155,6 +174,41 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
                   ),
                 ),
               ],
+            ),
+            AnimatedOpacity(
+              opacity: _opacity,
+              duration: Duration(milliseconds: 300),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          _scrollController.animateTo(
+                            _scrollController.position.maxScrollExtent,
+                            duration: const Duration(seconds: 2),
+                            curve: Curves.fastOutSlowIn,
+                          );
+                        },
+                        child: CircleAvatar(
+                          radius: 18,
+                          backgroundColor: Color.fromRGBO(58, 58, 60, 0.2),
+                          child: Icon(
+                            Icons.keyboard_arrow_down_rounded,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 9,
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
