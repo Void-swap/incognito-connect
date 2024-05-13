@@ -20,13 +20,6 @@ Intuitive design makes it easy for users to navigate and engage in conversations
 ### Customizable Settings: 
 Users can personalize their experience by adjusting notification preferences and other settings.
 
-
-## Usage:
-1. Launch the Incognito Connect application on your device.
-2. Sign in or create a new account if prompted.
-3. Enter a chat room or create a new conversation.
-4. Start sending messages anonymously and engage in conversations with other users.
-
 ## Contributing:
 Contributions to Incognito Connect are welcome! If you encounter any bugs, have feature requests, or would like to contribute code improvements, feel free to submit a pull request or open an issue on GitHub.
 
