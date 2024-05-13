@@ -155,7 +155,7 @@ class _IncognitoConnectState extends State<IncognitoConnect> {
                             ),
                           ),
                         ),
-
+        
                         // child: TextField(
                         //   controller: _msgController,
                         //   decoration: InputDecoration(hintText: 'Type here...'),
