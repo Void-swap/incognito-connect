@@ -1,12 +1,5 @@
 
-
-
-https://github.com/user-attachments/assets/1f46e4b1-4cb0-458d-884e-8b2ac4ffb73b
-
-
-
-https://github.com/user-attachments/assets/9a29f999-f317-4fec-9f60-473353728c1f
-
+  https://github.com/user-attachments/assets/6307a779-a0b3-46f9-9f4e-0df8497da8cc
 
 # Incognito Connect
 
